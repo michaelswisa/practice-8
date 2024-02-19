@@ -9,40 +9,39 @@
 # אם הסדרה ריקה יש להודיע על כך.
 
 
-my_str = [int(input("הכנס מספר - "))]
-for i in my_str:
+my_list = [int(input("enter number - "))]
+for i in my_list:
     if i == -1:
         break
-    my_str.append(int(input("הכנס מספר - ")))
-if my_str[0] == -1:
-    my_str.pop(0)
-    print("הסדרה ריקה")
-new_str = my_str
-new_str.remove(-1)
-print("המחרוזת שהתקבלה", new_str)
-maximum = 0
-for i in new_str:
-    if i > maximum:
-        maximum = i
-print("המספר המקסימלי", maximum)
-minimal = new_str[0]
-for i in new_str:
-    if minimal > i != -1:
-        minimal = i
-print("מספר מינימלי", minimal)
-sum = 0
-for i in new_str:
-    sum += i
-average = sum / len(my_str)
-print("סכום כולל של מספרי המחרוזת", sum)
-print("ממוצע", average)
-double = 0
-for i in new_str:
-    if i % 2 == 0:
-        double += 1
-print("סכום המספרים הזוגים", double)
-odd = 0
-for i in new_str:
-    if i % 2 != 0:
-        odd += 1
-print("סכום המספרים האי זוגים", odd)
+    my_list.append(int(input("enter number - ")))
+my_list.remove(-1)
+if len(my_list) == 0:
+    print("The series is empty")
+else:
+    print("The resulting string", my_list)
+    maximum = 0
+    for i in my_list:
+        if i > maximum:
+            maximum = i
+    print("the maximum number", maximum)
+    minimal = my_list[0]
+    for i in my_list:
+        if minimal > i != -1:
+            minimal = i
+    print("Minimum number", minimal)
+    sum = 0
+    for i in my_list:
+        sum += i
+    average = sum / len(my_list)
+    print("Total sum of the string numbers", sum)
+    print("average", average)
+    double = 0
+    for i in my_list:
+        if i % 2 == 0:
+            double += 1
+    print("the sum of the even numbers", double)
+    odd = 0
+    for i in my_list:
+        if i % 2 != 0:
+            odd += 1
+    print("The sum of the odd numbers", odd)
